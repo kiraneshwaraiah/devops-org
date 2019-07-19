@@ -12,7 +12,6 @@ stage ('push image') {
         app.push("latest")
         
  Deploy ('Run Image')
-docker run image
     }
 }
     } 
