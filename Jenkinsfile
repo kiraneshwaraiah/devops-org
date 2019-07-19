@@ -10,6 +10,9 @@ stage ('push image') {
     docker.withregistery('http://registery.hub.docker.cm', 'docker-hub-credentials') {
         app.push ("${env.build_number}")
         app.push("latest")
+        
+ Deploy ('Run Image')
+docker run image
     }
 }
     } 
