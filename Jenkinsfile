@@ -3,13 +3,9 @@ node {
     stage ('clone repository') {
         checkout scm
     }
+}
         stage ('build image') {
         app = docker.build("root/devops-org")
-        }
-Stage ('test image') {
-app.inside {
-    sh 'echo "test passed"'
-    }
 }
 stage ('push image') {
     docker.withregistery('http://registery.hub.docker.cm', 'docker-hub-credentials') {
