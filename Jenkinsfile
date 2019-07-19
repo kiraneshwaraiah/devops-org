@@ -3,7 +3,7 @@ node {
     stage ('clone repository') {
         checkout scm
     }
-        stage ('build image) {
+        stage ('build image') {
         app = docker.build("root/Devops-org")
         }
 Stage ('test image') {
